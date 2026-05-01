@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>دليل أدوات الذكاء الاصطناعي - الرفيع الإمام</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(145deg, #f5f7fe 0%, #e9eef8 100%);
+            color: #1a2a3f;
+            line-height: 1.6;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #d9e0ef;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 20px 30px;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border-radius: 48px;
+            padding: 40px 35px;
+            margin-bottom: 50px;
+            color: white;
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "✨";
+            font-size: 180px;
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .hero h1 i {
+            background: #3b82f6;
+            padding: 12px;
+            border-radius: 60px;
+            font-size: 1.8rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #3b82f6;
+            padding: 5px 12px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            margin: 10px 0 5px 0;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            max-width: 800px;
+            opacity: 0.9;
+        }
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .info-chip {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(6px);
+            padding: 8px 18px;
+            border-radius: 60px;
+            font-size: 0.9rem;
+        }
+        /* الزر الجديد */
+        .cv-btn {
+            margin-top: 30px;
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.2s;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .cv-btn i {
+            margin-left: 8px;
+        }
+        .cv-btn:hover {
+            background: #2563eb;
+            transform: scale(1.02);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 50px 0 25px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-right: 8px solid #3b82f6;
+            padding-right: 20px;
+        }
+        .section-title i {
+            color: #3b82f6;
+            font-size: 1.9rem;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 28px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(2px);
+            border-radius: 32px;
+            padding: 24px;
+            transition: all 0.25s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid rgba(255,255,255,0.7);
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+            background: white;
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .card p {
+            color: #2c3e55;
+            margin-bottom: 20px;
+        }
+        .card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #eef2ff;
+            padding: 8px 20px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            color: #1e40af;
+            transition: 0.2s;
+        }
+        .card a:hover {
+            background: #3b82f6;
+            color: white;
+        }
+        .tool-tag {
+            font-size: 0.7rem;
+            background: #dbeafe;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 60px;
+            margin-bottom: 12px;
+            color: #1e3a8a;
+        }
+        footer {
+            text-align: center;
+            margin-top: 70px;
+            padding: 30px;
+            border-top: 1px solid #cbd5e1;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 15px; }
+            .hero h1 { font-size: 1.9rem; }
+            .section-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <div class="badge">✨ باحث في البرمجة والذكاء الاصطناعي ✨</div>
+        <h1><i class="fas fa-robot"></i> مرحباً، أنا الرفيع الإمام</h1>
+        <p>مصمم ومطور ويب وتطبيقات أندرويد، وباحث في مجال البرمجة والذكاء الاصطناعي،
+        أدرس في كلية علوم الحاسوب وتقانة المعلومات - جامعة البطانة، الدفعة التاسعة.
+        </p>
+        <p>أضع بين يديك هذه الباقة المختارة من أدوات الذكاء الاصطناعي التي أحدثت فرقاً حقيقياً في حياتنا اليومية والعملية والعلمية،
+        لمساعدة الباحثين والمطورين والمبدعين على استثمار التقنية بذكاء.</p>
+        <div class="info-grid">
+            <span class="info-chip"><i class="fas fa-code"></i> مطور ويب & أندرويد</span>
+            <span class="info-chip"><i class="fas fa-graduation-cap"></i> كلية علوم الحاسوب - جامعة البطانة</span>
+            <span class="info-chip"><i class="fas fa-lightbulb"></i> ذكاء اصطناعي تعليمي & تطبيقي</span>
+        </div>
+        <!-- زر السيرة الذاتية (تمت إضافته) -->
+        <div>
+            <a href="http://alrafea.fwh.is/" target="_blank" class="cv-btn">
+                <i class="fas fa-user-graduate"></i> سيرتي الذاتية
+            </a>
+        </div>
+    </div>
+
+    <!-- الأقسام كما هي دون تغيير -->
+    <div class="section-title">
+        <i class="fas fa-book-open"></i>
+        <span>📖 القراءة والدراسة والأبحاث الأكاديمية</span>
+    </div>
+    <div class="cards-grid">
+        <div class="card"><div class="card-icon">📘</div><div class="tool-tag">تلخيص & تحليل</div><h3>NotebookLM</h3><p>أداة جوجل القوية: حمّل مستنداتك واسألها، ينتج ملخصات صوتية ومراجعات ذكية.</p><a href="https://notebooklm.google.com/" target="_blank">زيارة الموقع <i class="fas fa-external-link-alt"></i></a></div>
+        <div class="card"><div class="card-icon">🧠</div><div class="tool-tag">بحث علمي</div><h3>Perplexity AI</h3><p>محرك بحث بالذكاء الاصطناعي مع استشهادات دقيقة، مثالي للباحثين.</p><a href="https://www.perplexity.ai/" target="_blank">جرب الآن</a></div>
+        <div class="card"><div class="card-icon">📄</div><div class="tool-tag">قراءة PDF</div><h3>ChatPDF</h3><p>حمّل أي ملف PDF وتحدث معه كأنه محاور خبير.</p><a href="https://www.chatpdf.com/" target="_blank">فتح الأداة</a></div>
+        <div class="card"><div class="card-icon">✍️</div><div class="tool-tag">إعادة صياغة</div><h3>QuillBot</h3><p>تلخيص، إعادة صياغة، تدقيق لغوي للأبحاث والمقالات.</p><a href="https://quillbot.com/" target="_blank">استخدام QuillBot</a></div>
+    </div>
+
+    <div class="section-title">
+        <i class="fas fa-palette"></i>
+        <span>🎨 التصميم والجرافيك والإخراج البصري</span>
+    </div>
+    <div class="cards-grid">
+        <div class="card"><div class="card-icon">🎨</div><div class="tool-tag">توليد الصور</div><h3>Midjourney</h3><p>إبداع فائق الجودة، لوحات فنية ورسوميات بصرية استثنائية.</p><a href="https://www.midjourney.com/" target="_blank">استكشف</a></div>
+        <div class="card"><div class="card-icon">🖌️</div><div class="tool-tag">تصميم سريع</div><h3>Canva Magic Studio</h3><p>مئات القوالب وتصميم احترافي بالذكاء الاصطناعي دون خبرة.</p><a href="https://www.canva.com/ar_ae/" target="_blank">ابدأ التصميم</a></div>
+        <div class="card"><div class="card-icon">✨</div><div class="tool-tag">كتابة وتصميم</div><h3>Napkin.ai</h3><p>يحول أفكارك النصية إلى رسومات توضيحية وخرائط ذهنية تلقائياً.</p><a href="https://napkin.ai/" target="_blank">جرب Napkin</a></div>
+        <div class="card"><div class="card-icon">⚡</div><div class="tool-tag">مفتوح المصدر</div><h3>Flux AI</h3><p>نموذج قوي لتوليد الصور مع نصوص مدمجة، بديل ممتاز لـ DALL-E.</p><a href="https://flux-ai.io/" target="_blank">تجربة Flux</a></div>
+    </div>
+
+    <div class="section-title">
+        <i class="fas fa-laptop-code"></i>
+        <span>💻 البرمجة والتطوير والهندسة البرمجية</span>
+    </div>
+    <div class="cards-grid">
+        <div class="card"><div class="card-icon">🤖</div><div class="tool-tag">مساعد برمجي</div><h3>Claude 3.7 Sonnet</h3><p>أفضل نموذج للبرمجة المعقدة وتحليل الأكواد والوثائق التقنية.</p><a href="https://claude.ai/" target="_blank">تجربة Claude</a></div>
+        <div class="card"><div class="card-icon">🐍</div><div class="tool-tag">أكواد فورية</div><h3>GitHub Copilot</h3><p>يكمل الأكواد داخل VS Code، يزيد الإنتاجية 55%.</p><a href="https://github.com/features/copilot" target="_blank">اعرف المزيد</a></div>
+        <div class="card"><div class="card-icon">🧩</div><div class="tool-tag">تصحيح الأخطاء</div><h3>Phind</h3><p>محرك بحث AI للمبرمجين يقدم إجابات دقيقة مع مراجع.</p><a href="https://www.phind.com/" target="_blank">Phind</a></div>
+        <div class="card"><div class="card-icon">⚙️</div><div class="tool-tag">توليد وشرح</div><h3>DeepSeek Coder</h3><p>نموذج مفتوح المصدر وقوي، مجاني، يدعم العديد من لغات البرمجة.</p><a href="https://chat.deepseek.com/" target="_blank">DeepSeek Chat</a></div>
+    </div>
+
+    <div class="section-title">
+        <i class="fas fa-chalkboard-user"></i>
+        <span>📊 العروض التقديمية وتلخيص النصوص وإنشاء المحتوى</span>
+    </div>
+    <div class="cards-grid">
+        <div class="card"><div class="card-icon">📽️</div><div class="tool-tag">عروض سريعة</div><h3>Gamma</h3><p>ينشئ عروضاً تقديمية كاملة ومواقع مصغرة بأمر نصي واحد.</p><a href="https://gamma.app/" target="_blank">Gamma app</a></div>
+        <div class="card"><div class="card-icon">📜</div><div class="tool-tag">تلخيص ذكي</div><h3>TLDR This</h3><p>يلخص أي مقال أو صفحة ويب طويلة إلى نقاط رئيسية.</p><a href="https://tldrthis.com/" target="_blank">جرب التلخيص</a></div>
+        <div class="card"><div class="card-icon">🗣️</div><div class="tool-tag">نصوص احترافية</div><h3>Jasper AI</h3><p>كتابة مقالات، تقارير، محتوى تسويقي عالي الجودة.</p><a href="https://www.jasper.ai/" target="_blank">Jasper AI</a></div>
+        <div class="card"><div class="card-icon">🔮</div><div class="tool-tag">ذكاء عام</div><h3>ChatGPT (GPT-4o)</h3><p>توليد نصوص، تلخيص، عصف ذهني، وتحليل مستندات.</p><a href="https://chat.openai.com/" target="_blank">فتح ChatGPT</a></div>
+    </div>
+
+    <div class="section-title">
+        <i class="fas fa-cogs"></i>
+        <span>⚙️ أدوات ذكية للاستخدام اليومي</span>
+    </div>
+    <div class="cards-grid">
+        <div class="card"><div class="card-icon">🎤</div><div class="tool-tag">صوت وذكاء</div><h3>ElevenLabs</h3><p>توليد أصوات واقعية بالعربية والإنجليزية، قراءة نصوص بودكاست.</p><a href="https://elevenlabs.io/" target="_blank">تجرية الصوت</a></div>
+        <div class="card"><div class="card-icon">🎓</div><div class="tool-tag">ترجمة & تعلم</div><h3>DeepL</h3><p>أدق مترجم ذكي على الإطلاق، يدعم السياقات العلمية.</p><a href="https://www.deepl.com/ar/translator" target="_blank">DeepL</a></div>
+        <div class="card"><div class="card-icon">📊</div><div class="tool-tag">خرائط ذهنية</div><h3>GitMind AI</h3><p>يحول النصوص والفيديوهات إلى خرائط ذهنية جاهزة.</p><a href="https://gitmind.com/ar/" target="_blank">GitMind</a></div>
+        <div class="card"><div class="card-icon">🧪</div><div class="tool-tag">أبحاث معمقة</div><h3>Elicit</h3><p>أداة للباحثين لتحليل الأوراق العلمية واستخراج النتائج.</p><a href="https://elicit.com/" target="_blank">Elicit</a></div>
+    </div>
+
+    <footer>
+        <i class="fas fa-brain"></i> جمع وإعداد: الرفيع الإمام – باحث في علوم الحاسوب والذكاء الاصطناعي – جامعة البطانة 🇸🇩<br>
+        هذه الصفحة مفتوحة المصدر، يمكنك مشاركتها وتطويرها لأي باحث مهتم.
+    </footer>
+</div>
+</body>
+</html>
