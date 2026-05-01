@@ -1,1 +1,4 @@
 
+User-agent: *
+Allow: /
+Sitemap: https://alrafeaalimam.github.io/ai-tools-guide/sitemap.xml
